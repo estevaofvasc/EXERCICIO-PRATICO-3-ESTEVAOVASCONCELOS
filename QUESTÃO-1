@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Campo de Nome</title>
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine; 
+            text-align: center;}
+            h1 {color: #3b3591;}
+            h2 {font-size: 18px;
+                color: #3b3591;}
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Bem Vindo!</h1>
+        <h2 class="title">Insira seu nome:</h2>
+        <input type="text" id="mensagem" placeholder="Nome" required>
+        <button type="submit" onclick="mostrarmensagem()">Enviar</button>
+        <p id="resposta"></p>
+        <script>
+            function mostrarmensagem(){
+                const nomedigitado = document.getElementById("mensagem").value;
+                const resposta = document.getElementById("resposta");
+                if (nomedigitado.trim() === ""){
+                    resposta.textContent = "Por favor, digite seu nome";
+                } else {
+                    resposta.textContent = `Olá! ${nomedigitado}, seja bem vindo!`}
+                }
+        </script>
+    </body>
+</html>
