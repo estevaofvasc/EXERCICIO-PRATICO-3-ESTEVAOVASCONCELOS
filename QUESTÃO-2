@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gerador de Lista</title>
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;
+                background-color: aquamarine;
+                text-align: center;}
+                h1 {color: #3b3591;}
+        </style>
+    </head>
+    <body>
+         <h1 class="title">Gerador de lista</h1>
+         <input type="number" id="quantidade" placeholder="Digite a quantidade de items">
+         <button onclick="gerarLista()">Gerar Lista</button>
+         <ul id="lista"></ul>
+         <script>
+            function gerarLista() {
+                const quantidade = document.getElementById("quantidade").value;
+                const lista = document.getElementById("lista");
+                lista.innerHTML = "";
+                for (let i = 1; i <= quantidade; i++) {
+                    const item = document.createElement("li");
+                    item.textContent = `Estevão Vasconcelos ${i}`;
+                    lista.appendChild(item);
+                }
+            }
+         </script>
+    </body>
+</html>
