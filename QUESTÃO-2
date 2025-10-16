@@ -19,6 +19,12 @@
                 const quantidade = document.getElementById("quantidade").value;
                 const lista = document.getElementById("lista");
                 lista.innerHTML = "";
+                 if (!quantidade || quantidade <= 0) {
+                    const warning = document.createElement("li");
+                    warning.textContent = "Por favor, selecione ou digite um número.";
+                    lista.appendChild(warning);
+                    return;
+                }
                 for (let i = 1; i <= quantidade; i++) {
                     const item = document.createElement("li");
                     item.textContent = `Estevão Vasconcelos ${i}`;
